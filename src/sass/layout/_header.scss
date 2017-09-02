@@ -1,0 +1,116 @@
+.visit-page{
+  width: 100%;
+  height: 800px;
+  background-color: #f2ebe6;
+  min-height: 400px;
+  @include for-tablet-landscape-up{
+    height: 100vh;
+  };
+}
+
+.nav-bar{
+  position: absolute;
+  width: 100%;
+  margin-top: 8.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  background-image: url("../images/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 174px;
+  height: 37px;
+  @include for-phone-only{
+    width: 130.5px;
+    height: 27.75px;
+  }
+}
+
+.main-menu{
+  @include for-tablet-landscape-up{
+    display: block;
+  }
+  display: none;
+  &_list{
+    &_item{
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.875em;
+      margin: 0 0.5em;
+    }
+  }
+}
+
+.search-cart{
+  display: flex;
+  &_icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-size: cover;
+    display: block;
+    &--search{
+      @include for-desktop-up{
+        margin: 0 2.875em;
+      }
+      background: url(../images/sprite-icon.png) 1px 0 no-repeat;
+      margin: 0 1em;
+    }
+    &--bag{
+      @include for-tablet-landscape-up{
+        margin: 0 1.125em;
+      }
+      background: url(../images/sprite-icon.png) -23px 0px no-repeat;
+      margin: 0 0.75em;
+    }
+  }
+  &_cart{
+    display: flex;
+    align-items: center;
+    .cart-text{
+      @include for-tablet-landscape-up{
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.875em;
+      }
+      display: none;
+    }
+  }
+}
+
+.start-category{
+  position: relative;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  top:50%;
+  left:50%;
+  &_banner{
+    width:50%;
+    padding: 1em;
+    &-img{
+      width:100%;
+      height: 38vh;
+      min-height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      &--women{
+        background-image: url("../images/women-main.png");
+      }
+      &--men{
+        background-image: url("../images/men-main.png");
+      }
+    }
+    h3{
+      @include for-phone-only{
+        font-size: 0.8em;
+      }
+      text-align: center;
+      text-transform: uppercase;
+      color: $light-brown;
+    }
+  }
+}
+

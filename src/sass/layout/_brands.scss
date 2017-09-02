@@ -1,0 +1,41 @@
+.brands{
+    background-color: #e5e5e5;
+    top: 150px;
+    padding: 100px 0;
+    .side-category__aside-header{
+      transform: rotate(-90deg) translateY(-50%) translateX(10%)
+    }
+}
+
+.brand-list{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 12px;
+  &_item{
+    position: relative;
+    width: 23%;
+    &_content{
+      width: 100%;
+    }
+    &_image{
+      position: relative;
+      padding-top: 100%;
+      width: 100%;
+      border: 1px solid #aaaaaa;
+      img{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 70%;
+      }
+    }
+    &_text{
+      margin-top: 30px;
+      text-align: center;
+      color: #a77c5a;
+    }
+  }
+}

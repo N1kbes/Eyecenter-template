@@ -1,0 +1,67 @@
+.arrow-bttn-wh{
+  display: block;
+  width: 100%;
+  border: 1px solid #e4e0db;
+  text-align: center;
+  color: #fff;
+  line-height: 3;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: inherit;
+  &:hover{
+    opacity: 0.8;
+    &:after{
+      opacity: 0;
+      right: 0;
+    }
+  }
+  &:after{
+    content: "";
+    background-image: url("../images/arrow-bttn.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 6px;
+    height: 11px;
+    top: 50%;
+    right: 37px;
+    transform: translateY(-50%);
+    display: block;
+    transition-duration: 0.5s;
+    opacity: 1;
+  }
+}
+
+
+.arrow-bttn-bk{
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #e4e0db;
+  text-align: center;
+  color: #000;
+  line-height: 3;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: inherit;
+  &:hover{
+    opacity: 0.8;
+    &:after{
+      opacity: 0;
+      right: 0;
+    }
+  }
+  &:after{
+    content: "";
+    background-image: url("../images/arrow-bttn-bk.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 6px;
+    height: 11px;
+    top: 50%;
+    right: 37px;
+    transform: translateY(-50%);
+    display: block;
+    transition-duration: 0.5s;
+    opacity: 1;
+  }
+}

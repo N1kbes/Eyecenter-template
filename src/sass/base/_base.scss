@@ -1,0 +1,75 @@
+body{
+  min-width: 400px;
+  font-family: Gotham, sans-serif;
+}
+
+h3{
+  color: #fff;
+  font-size: 2em;
+}
+ul{
+  -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+
+}
+.active{
+  display: block !important;
+}
+
+.container{
+  position: relative;
+  width: 81.3%;
+  @include for-phone-only{
+    width: 90%;
+  };
+}
+
+
+@include for-phone-only{
+  .visit-page{
+    .container{
+      width: 100%;
+    }
+    aside{
+      display: none;
+    }
+  }
+};
+
+
+.flex{
+  display: flex;
+}
+
+.side-category{
+  width: 9.35%;
+  position: relative;
+  &__aside-header{
+    transform: rotate(-90deg) translateY(-50%) translateX(-100%);
+    transform-origin: top left;
+    font-size: 0;
+    position: absolute;
+    left: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+
+  &--thin{
+      margin: 0;
+      font-size: 24px;
+      font-family: 'gotham-light';
+      text-transform: uppercase;
+      &:before{
+        content: '— ';
+      }
+  }
+  &--bold{
+    font-size: 24px;
+    font-family: 'gotham-bold';
+    text-transform: uppercase;
+  }
+  }
+}

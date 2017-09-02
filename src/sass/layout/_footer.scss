@@ -1,0 +1,28 @@
+.footer{
+	height: 185px;
+	background-color: #f2ebe6;
+	padding: 0 15px;
+	.wrapper{
+		width: 100%;
+		margin: 0 auto;
+		@include for-desktop-up{
+			width: 1080px;
+		};
+	}
+	.partners{
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+		&_others{
+			display: flex;
+			align-items: center;
+			& div:first-child{
+				margin-right: 57px;
+			}
+			@include for-phone-only{
+				display: none;
+			};
+		}
+	}
+}

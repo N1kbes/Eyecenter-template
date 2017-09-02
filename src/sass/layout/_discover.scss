@@ -1,0 +1,82 @@
+.card-row{
+ display: none;
+ justify-content: space-between;
+ margin: 110px 0;
+ width: 100%;
+ @include for-tablet-landscape-up{
+   display: flex;
+   font-size: 12px;
+ };
+ @include for-desktop-up{
+   font-size: 16px;
+ };
+ &_item{
+   width: 33%;
+   position: relative;
+   background-image: url('../images/banners/banners-2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   &:nth-child(2){
+    background-image: url('../images/banners/banners-1.png');
+   }
+   &_content{
+     width: 100%;
+     padding-top: 100%;
+   }
+   &:after{
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+     background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+     background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+     top: 0;
+     left: 0;
+     z-index: 1;
+   }
+   &_header{
+     position: absolute;
+     text-align: center;
+     width: 250px;
+     top: 25%;
+     left: 50%;
+     @include for-desktop-up{
+       top: 0;
+     };
+     @include for-big-desktop-up{
+       top: 25%;
+     };
+     transform: translateX(-50%);
+          z-index: 2;
+   }
+   &_bttn{
+     width: 310px;
+     position: absolute;
+     bottom: 10%;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 2;
+     @include for-tablet-landscape-up{
+       display: none;
+     };
+     @include for-desktop-up{
+       display: block;
+       width: 80%;
+     };
+     @include for-big-desktop-up{
+       width: 310px;
+     };
+     a{
+       padding: 15px 0;
+       font-size: 1.2em;
+       @include for-desktop-up{
+         padding: 5px 0;
+       };
+       @include for-big-desktop-up{
+         padding: 15px 0;
+       };
+     }
+   }
+ }
+}
