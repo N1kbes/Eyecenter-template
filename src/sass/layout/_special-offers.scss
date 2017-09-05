@@ -4,6 +4,7 @@
   .offer-blocks{
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
     @include for-tablet-landscape-up{
       font-size: 10px;
     };
@@ -51,8 +52,9 @@
       display: flex;
       align-items: center;
       box-sizing: border-box;
+      font-size: 12px;
       @include for-phone-only{
-        font-size: 12px;
+        font-size: 8px;
         height: 160px;
       };
       &_item{
@@ -121,10 +123,17 @@
         width: 310px;
         height: 200px;
       }
+      @include for-phone-only{
+        width: 80%;
+      };
       &--rb{
         position: absolute;
         right: 50px;
         bottom: 50px;
+        @include for-phone-only{
+          right: 10px;
+          bottom: 10px;
+        };
       }
       &--cb{
         position: absolute;

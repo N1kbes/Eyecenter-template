@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    spritesmith = require('gulp.spritesmith');
+    spritesmith = require('gulp.spritesmith'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('connect', function() {
@@ -26,6 +27,10 @@ gulp.task('css', function () {
 gulp.task('sass', function () {
   return gulp.src('./src/sass/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
     .pipe(gulp.dest('./src/css'));
 });
 

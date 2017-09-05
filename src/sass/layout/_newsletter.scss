@@ -10,7 +10,10 @@
 	};
 	form{
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+		@include for-phone-only{
+			width: 100%;
+		};
 		input[type="text"]{
 			border: 1px solid #a77c5a;
 			padding-left: 42px;
@@ -23,7 +26,9 @@
 				width: 650px;
 			};
 			@include for-phone-only{
-				width: 300px
+				width: 90%;
+				height: 70px;
+				padding-right: 70px;
 			};
 		}
 		input[type="submit"]{
@@ -36,6 +41,11 @@
 			background-image: url('../images/send-icon.png');
 			background-repeat: no-repeat;
 			background-position: center center;
+			@include for-phone-only{
+				width: 70px;
+				height: 70px;
+				margin-left: -70px;
+			};
 			&:active{
 				opacity: 0.8;
 			}

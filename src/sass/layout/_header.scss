@@ -1,9 +1,9 @@
 .visit-page{
   width: 100%;
-  height: 800px;
+  height: 600px;
   background-color: #f2ebe6;
   min-height: 400px;
-  @include for-tablet-landscape-up{
+  @include for-tablet-portrait-up {
     height: 100vh;
   };
 }
@@ -81,8 +81,9 @@
 }
 
 .start-category{
-  position: relative;
+  position: absolute;
   width: 100%;
+  height: 40vh;
   transform: translateX(-50%) translateY(-50%);
   top:50%;
   left:50%;
@@ -91,7 +92,7 @@
     padding: 1em;
     &-img{
       width:100%;
-      height: 38vh;
+      height: 80%;
       min-height: 100px;
       background-size: contain;
       background-repeat: no-repeat;
@@ -113,4 +114,3 @@
     }
   }
 }
-
