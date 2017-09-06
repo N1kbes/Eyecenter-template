@@ -82,11 +82,13 @@
 
 .start-category{
   position: absolute;
+  margin: auto;
   width: 100%;
   height: 40vh;
-  transform: translateX(-50%) translateY(-50%);
-  top:50%;
-  left:50%;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
   &_banner{
     width:50%;
     padding: 1em;
